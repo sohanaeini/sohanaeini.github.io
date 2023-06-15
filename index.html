@@ -4,39 +4,112 @@
   <meta charset="utf-8">
   <title>Your Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset default styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f3f6;
+      color: #333;
+    }
+
     header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+      background-color: #e44285;
+      padding: 40px;
       text-align: center;
     }
 
     h1 {
-      margin: 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 20px;
     }
 
     main {
-      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #e44285;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #d32e68;
     }
 
     footer {
-      background-color: #333;
+      background-color: #e44285;
       color: #fff;
       padding: 10px;
       text-align: center;
+      font-size: 14px;
+      margin-top: 40px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Additional styles */
+    img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-info li svg {
+      margin-right: 10px;
+      color: #e44285;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Soha Naeini</h1>
-    <p>Software Engineer | Designer</p>
+    <h1>Your Name</h1>
+    <p class="subtitle">Web Developer | Designer</p>
+    <img src="path/to/your/image.jpg" alt="Your Name">
   </header>
 
   <main>
@@ -52,15 +125,36 @@
     </ul>
 
     <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to reach out to me:</p>
-    <ul>
-      <li>Email: sohanaeini@gmail.com</li>
-      <li>Phone: 425-442-3220</li>
+    <ul class="contact-info">
+      <li>
+        <svg xmlns="http
+        // Add the SVG code for the envelope icon
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+        <path
+          d="M0 3.984h24V20.016H0V3.984zM21 6L12 12.75 3 6"
+        />
+      </svg>
+      your-email@example.com
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+        <path
+          d="M4 0h16a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+        />
+        <path
+          d="M12 2L12 0"
+        />
+      </svg>
+      123-456-7890
+      </li>
     </ul>
   </main>
 
   <footer>
-    &copy; 2023 Soha Naeini
+    &copy; 2023 Your Name
   </footer>
 </body>
 </html>
