@@ -103,29 +103,66 @@
       margin-right: 10px;
       color: #6e43c4;
     }
+
+    /* Scrollbar styles */
+    .scrollbar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 80vh;
+      background-color: rgba(255, 255, 255, 0.7);
+      z-index: 999;
+      border-radius: 10px;
+    }
+
+    .scrollbar button {
+      width: 12px;
+      height: 12px;
+      margin: 5px;
+      border-radius: 50%;
+      background-color: #6e43c4;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .scrollbar button:hover {
+      background-color: #4a73a0;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Name</h1>
-    <p class="subtitle">Web Developer | Designer</p>
-    <img src=ç.jpg alt="Soha Naeini">
+    <h1>Soha Naeini</h1>
+    <p class="subtitle">Software Engineer</p>
+    <img src="ç.jpg" alt="Soha Naeini">
   </header>
 
+  <div class="scrollbar">
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('work')">Work</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+  </div>
+
   <main>
-    <h2>About Me</h2>
+    <h2 id="about">About Me</h2>
     <p>Welcome to my portfolio website. I am a web developer with a passion for creating visually appealing and user-friendly websites.</p>
 
-    <h2>My Work</h2>
+    <h2 id="work">My Work</h2>
     <p>Here are some of the projects I've worked on:</p>
     <ul>
       <li><a href="#">Project 1</a></li>
       <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 
-        3</a></li>
+      <li><a href="#">Project 3</a></li>
     </ul>
 
-    <h2>Contact Me</h2>
+    <h2 id="contact">Contact Me</h2>
     <ul class="contact-info">
       <li>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -156,8 +193,8 @@
   <footer>
     &copy; 2023 Your Name
   </footer>
+
   <script>
-    // Function to create a sliding gradient background
     function animateBackground() {
       const background = document.querySelector('body');
       let position = 0;
@@ -167,7 +204,15 @@
       }, 20);
     }
 
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
     animateBackground();
-  </script>
+</script>
 </body>
 </html>
+
+ 
+
