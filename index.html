@@ -13,6 +13,7 @@
 
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       color: #333;
       overflow-x: hidden;
     }
@@ -86,8 +87,6 @@
       border-radius: 50%;
       margin: 0 auto 20px;
       display: block;
-      background: linear-gradient(to right, #4a73a0, #6e43c4, #c4a9ef);
-      padding: 20px;
     }
 
     .contact-info {
@@ -105,135 +104,126 @@
       color: #6e43c4;
     }
 
-    /* Side Scrollbar */
-    .scrollbar {
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 15px;
-      background-color: rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+          /* Side Scrollbar */
+          .scrollbar {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .scrollbar button {
-      width: 100%;
-      background-color: transparent;
-      border: none;
-      color: #6e43c4;
-      font-size: 16px;
-      cursor: pointer;
-      outline: none;
-    }
+      .scrollbar button {
+        margin-bottom: 10px;
+        background-color: transparent;
+        border: none;
+        color: #6e43c4;
+        font-size: 16px;
+        cursor: pointer;
+        outline: none;
+      }
 
-    .scrollbar button:hover {
-      color: #4a73a0;
-    }
- 
-    .scrollbar::-webkit-scrollbar {
-      width: 15px;
-    }
+      .scrollbar button:hover {
+        color: #4a73a0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrollbar">
+      <button onclick="scrollToSection('about')">About</button>
+      <button onclick="scrollToSection('experiences')">My Experiences</button>
+      <button onclick="scrollToSection('work')">My Work</button>
+      <button onclick="scrollToSection('contact')">Contact Me</button>
+      
+    </div>
 
-    .scrollbar::-webkit-scrollbar-thumb {
-      background-color: #6e43c4;
-      border-radius: 10px;
-    }
+    <header>
+      <h1>Soha Naeini</h1>
+      <p class="subtitle">Software Engineer</p>
+      <img src="ç.jpg" alt="Soha Naeini">
+    </header>
 
-    .scrollbar::-webkit-scrollbar-track {
-      background-color: rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div class="scrollbar">
-    <button onclick="scrollToSection('about')">About</button>
-    <button onclick="scrollToSection('experiences')">My Experiences</button>
-    <button onclick="scrollToSection('work')">My Work</button>
-    <button onclick="scrollToSection('contact')">Contact Me</button>
-  </div>
+    <main>
+      <h2 id="about">About Me</h2>
+      <p>I am a highly motivated computer science student at the University of Washington, Seattle, with a passion for exploring the diverse applications of computing. 
+        With a strong technical bacground, I am known for my ability to find creative solutions to complex problems. As a business minor, I also have a keen interest in understanding the intersection of technology and business.
+        I consider myself a diligent and detail-oriented worker, always striving to improve my skills and knowledge in the field. 
+        My passion for learning drives me to take on new challenges with a positive attitude and determination. I have a strong work ethic and am fascinated by the ever-evolving world of technology. I am excited to continue expanding my horizons and contributing to the advancements in computing and its applications.</p>
 
-  <header>
-    <h1>Soha Naeini</h1>
-    <p class="subtitle">Software Engineer</p>
-    <img src="your_picture.jpg" alt="Soha Naeini">
-  </header>
+      <h2 id="work">My Work</h2>`
+      <p>Here are some of the opportunities I hava had:</p>
+      <ul>
+        <li><a href="#">Project 1</a></li>
+        <li><a href="#">Project 2</a></li>
+        <li><a href="#">Project 3</a></li>
+      </ul>
 
-  <main>
-    <h2 id="about">About Me</h2>
-    <p>I am a highly motivated computer science student at the University of Washington, Seattle, with a passion for exploring the diverse applications of computing. 
-      With a strong technical background, I am known for my ability to find creative solutions to complex problems. As a business minor, I also have a keen interest in understanding the intersection of technology and business.
-      I consider myself a diligent and detail-oriented worker, always striving to improve my skills and knowledge in the field. 
-      My passion for learning drives me to take on new challenges with a positive attitude and determination. I have a strong work ethic and am fascinated by the ever-evolving world of technology. I am excited to continue expanding my horizons and contributing to the advancements in computing and its applications.</p>
-
-    <h2 id="work">My Work</h2>
-    <p>Here are some of the opportunities I have had:</p>
-    <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-
-    <h2 id="experiences">My Experiences</h2>
-    <p>Here are some of the projects I've worked on:</p>
-    <ul>
-      <li><a href="#">Experience 1</a></li>
-      <li><a href="#">Experience 2</a></li>
-      <li><a href="#">Experience 3</a></li>
-    </ul>
-
-    <h2 id="contact">Contact Me</h2>
-    <ul class="contact-info">
-      <li>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
-        <path
-          d="M0 3.984h24V20.016H0V3.984zM21 6L12 12.75 3 6"
-        />
-      </svg>
-      sohanaeini@gmail.com
-      </li>
-      <li>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-        viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
-        <path
-          d="M4 0h16a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
-        />
-        <path
-          d="M12 2L12 0"
-        />
-      </svg>
-      425-442-3220
-      </li>
-    </ul>
-  </main>
-
-  <footer>
-    &copy; 2023 Soha Naeini
-  </footer>
-
-  <script>
-    // Function to create a sliding gradient background
-    function animateBackground() {
-      const background = document.querySelector('body');
-      let position = 0;
-      setInterval(() => {
-        position += 1;
-        background.style.backgroundPosition = `${position}px 0`;
-      }, 20);
-    }
-
-    // Function to scroll to a section
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    animateBackground();
-  </script>
-</body>
-</html>
+      <h2 id="experiences">My Experiences</h2>`
+      <p>Here are some of the projects I've worked on:</p>
+      <ul>
+        <li><a href="#">Experience 1</a></li>
+        <li><a href="#">Experience  2</a></li>
+        <li><a href="#">Experience 3</a></li>
+      </ul>
+      <h2 id="contact">Contact Me</h2>
+      <ul class="contact-info">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail">
+          <path
+            d="M0 3.984h24V20.016H0V3.984zM21 6L12 12.75 3 6"
+          />
+        </svg>
+        sohanaeini@gmail.com
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone">
+          <path
+            d="M4 0h16a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"
+          />
+          <path
+            d="M12 2L12 0"
+            />
+          </svg>
+          425-442-3220
+          </li>
+        </ul>
+      </main>
+    
+      <footer>
+        &copy; 2023 Soha Naeini
+      </footer>
+    
+      <script>
+        // Function to create a sliding gradient background
+        function animateBackground() {
+          const background = document.querySelector('body');
+          let position = 0;
+          setInterval(() => {
+            position += 1;
+            background.style.backgroundPosition = `${position}px 0`;
+          }, 20);
+        }
+    
+        // Function to scroll to a section
+        function scrollToSection(sectionId) {
+          const section = document.getElementById(sectionId);
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+    
+        animateBackground();
+      </script>
+    </body>
+    </html>
+    
 
